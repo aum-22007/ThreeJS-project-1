@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyberpunk 2077 Logo Demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    html, body {
+      width: 100vw;
+      height: 100vh;
+      padding: 0;
+      margin: 0;
+      background: #000;
+      overflow: hidden;
+    }
+    .main {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+    #canvas {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      background: transparent;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <canvas id="canvas"></canvas>
+    <div class="logo-overlay">
+      <img id="logo-overlay" src="/cyberpunk-overlay.png" alt="Cyberpunk overlay">
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

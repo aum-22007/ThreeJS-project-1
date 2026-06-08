@@ -1,0 +1,61 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body{
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+}
+body{
+  background-color: #000;
+  overflow: hidden;
+}
+
+#canvas{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.logo-overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  pointer-events: none;
+  width: min(2000px, 66vw);
+  max-width: 2000px;
+}
+
+.logo-overlay::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  border-radius: 28px;
+  background: radial-gradient(circle at center, rgba(8, 216, 255, 0.1), transparent 50%);
+  filter: blur(14px);
+  opacity: 0.3;
+  z-index: -2;
+}
+
+.logo-overlay::after {
+  content: '';
+  position: absolute;
+  inset: -32px;
+  border-radius: 28px;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.03), transparent 60%);
+  filter: blur(20px);
+  opacity: 0.14;
+  z-index: -3;
+}
+
+#logo-overlay {
+  width: 100%;
+  display: block;
+  opacity: 0.55;
+  filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.18)) saturate(1.08) contrast(1.02);
+}
